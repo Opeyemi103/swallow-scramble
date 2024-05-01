@@ -14,8 +14,9 @@ function shuffleString(string) {
 }
 
 function checkAnswer() {
-    const answer = puzzleInput.value.toUpperCase();
-    if (answer === puzzleWord) {
+    const answer = puzzleInput.value.toUpperCase(); // Convert user input to uppercase
+    const puzzleWordUpper = puzzleWord.toUpperCase(); // Convert puzzle word to uppercase
+    if (answer === puzzleWordUpper) {
         feedback.textContent = "Correct! Well done, " + nameInput.value + "!";
         sendWhatsAppMessage(nameInput.value + " solved the Swallow Scramble Challenge! The correct answer is: " + puzzleWord);
     } else {
